@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Leyes Físicas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <h1>Cálculo de Leyes Físicas</h1>
+
+    <section id="kirchhoff">
+        <h2>Ley de Kirchhoff</h2>
+        <h3>Circuito en Serie</h3>
+        <form id="kirchhoff-serie">
+            <label for="resistencias-serie">Resistencias (Ω, separadas por comas):</label>
+            <input type="text" id="resistencias-serie" placeholder="Ejemplo: 10,20,30">
+            <button type="button" onclick="calcularKirchhoffSerie()">Calcular</button>
+        </form>
+        <p id="resultado-kirchhoff-serie"></p>
+
+        <h3>Circuito en Paralelo</h3>
+        <form id="kirchhoff-paralelo">
+            <label for="resistencias-paralelo">Resistencias (Ω, separadas por comas):</label>
+            <input type="text" id="resistencias-paralelo" placeholder="Ejemplo: 10,20,30">
+            <button type="button" onclick="calcularKirchhoffParalelo()">Calcular</button>
+        </form>
+        <p id="resultado-kirchhoff-paralelo"></p>
+    </section>
+
+    <section id="ohm">
+        <h2>Ley de Ohm</h2>
+        <form id="ohm-form">
+            <label for="voltaje">Voltaje (V):</label>
+            <input type="number" id="voltaje">
+            <label for="corriente">Corriente (A):</label>
+            <input type="number" id="corriente">
+            <label for="resistencia">Resistencia (Ω):</label>
+            <input type="number" id="resistencia">
+            <label for="potencia">Potencia (W):</label>
+            <input type="number" id="potencia">
+            <button type="button" onclick="calcularOhm()">Calcular</button>
+        </form>
+        <p id="resultado-ohm"></p>
+    </section>
+
+    <section id="maxwell">
+        <h2>Ley de Maxwell</h2>
+        <form id="maxwell-form">
+            <label for="campo-electrico">Campo Eléctrico (E, V/m):</label>
+            <input type="number" id="campo-electrico">
+            <label for="flujo-electrico">Flujo Eléctrico (Φ, Vm):</label>
+            <input type="number" id="flujo-electrico">
+            <label for="densidad-carga">Densidad de Carga (ρ, C/m³):</label>
+            <input type="number" id="densidad-carga">
+            <label for="permisividad">Permisividad (ε₀, F/m):</label>
+            <input type="number" id="permisividad">
+            <button type="button" onclick="calcularMaxwell()">Calcular</button>
+        </form>
+        <p id="resultado-maxwell"></p>
+    </section>
+
+    <section id="gauss">
+        <h2>Ley de Gauss</h2>
+        <form id="gauss-form">
+            <label for="campo-electrico-gauss">Campo Eléctrico (E, N/C):</label>
+            <input type="number" id="campo-electrico-gauss">
+            <label for="area">Área (A, m²):</label>
+            <input type="number" id="area">
+            <label for="carga">Carga (Q, C):</label>
+            <input type="number" id="carga">
+            <button type="button" onclick="calcularGauss()">Calcular</button>
+        </form>
+        <p id="resultado-gauss"></p>
+    </section>
+
+    <section id="faraday">
+        <h2>Ley de Faraday</h2>
+        <form id="faraday-form">
+            <label for="variacion-flujo">Variación del Flujo Magnético (ΔΦ, Wb):</label>
+            <input type="number" id="variacion-flujo">
+            <label for="tiempo">Tiempo (Δt, s):</label>
+            <input type="number" id="tiempo">
+            <button type="button" onclick="calcularFaraday()">Calcular</button>
+        </form>
+        <p id="resultado-faraday"></p>
+    </section>
+
+    <section id="integrantes">
+        <h2>Integrantes del Equipo</h2>
+        <p id="lista-integrantes"></p>
+        <p>Flores Pecina Tomas Yahel</p>
+        <p>Garcia Guzman Jesus Alejandro</p>
+        <p>Reyes Chavez Azul Nohemi</p>
+        <p>Tellez González Esteban</p>
+    </section>
+</body>
+</html>
